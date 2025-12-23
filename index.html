@@ -22,6 +22,35 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <title>Habitses</title>
+    <style>
+      .hero {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+      @media (max-width: 768px) {
+        .hero {
+          flex-direction: column;
+        }
+        
+        /* Применяем order к прямым детям */
+        .hero > div {
+          order: 2;
+        }
+        
+        .hero > img {
+          max-height: 300px;
+          order: 1;
+          object-fit: contain;
+        }
+        
+        /* Кнопка внутри div, поэтому стилизуем её отдельно */
+        .hero button {
+          width: 100%;
+          max-width: 480px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class='container'>
@@ -33,17 +62,17 @@
           <li><a href='#'>How it Works</a></li>
         </ul>
       </nav>
-      <a href='https://apps.apple.com/us/app/habitses-your-habit-tracker/id1574960856?utm_source=site'><button>Get Started</button></a>
+      <a class="getstarted" href='https://apps.apple.com/us/app/habitses-your-habit-tracker/id1574960856?utm_source=site'><button>Get Started</button></a>
     </header>
     <main class='container'>
       <div class='hero'>
-        <div>
+        <div style="margin-bottom: 1rem;">
           <h1>Habitses</h1>
           <p>Do you struggle with sticking to your habits? Well, this day just turned fantastic.
           </p>
           <a href='https://apps.apple.com/us/app/habitses-your-habit-tracker/id1574960856?utm_source=site'><button><U+F8FF> Download Now</button></a>
         </div>
-        <img src='img/picc.png'>
+        <img src='img/h_promo.png'>
       </div>
       <div class='quote'>
         <p>We truly believe that joy resides at the center of our being and motivates us to self-improve. As a team we want to go beyond just another application. That's why we developed the best ever habit tracker for frogs. It’s likely it would work well for humans too!
